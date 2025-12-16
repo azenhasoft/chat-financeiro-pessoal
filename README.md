@@ -1,73 +1,72 @@
-# Welcome to your Lovable project
+# 📱 App de Finanças Pessoais Conversacional
 
-## Project info
+## 🎯 Contexto
+Este projeto foi desenvolvido como parte do desafio da DIO, aplicando o conceito de **Vibe Coding**.  
+A ideia é criar um aplicativo de Organização de Finanças Pessoais que funcione por meio de conversas com o usuário, tornando o controle financeiro simples e natural, sem formulários manuais ou planilhas complexas.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+---
 
-## How can I edit this code?
+## 📝 Prompt Final (PRD)
 
-There are several ways of editing your application.
+### Contexto  
+Quero criar um aplicativo de Organização de Finanças Pessoais que funcione por meio de conversas com o usuário.  
+A ideia é facilitar o controle financeiro de forma simples e natural, sem formulários manuais ou planilhas complexas.
 
-**Use Lovable**
+### Problema  
+Muitas pessoas desistem de controlar seus gastos porque os apps atuais exigem muita entrada manual e pouca personalização.  
+Quero resolver isso com uma experiência de conversa e recomendações automáticas de economia.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+### Público-Alvo  
+Pessoas que querem começar a organizar suas finanças de forma prática e sem complicação, principalmente iniciantes.
 
-Changes made via Lovable will be committed automatically to this repo.
+### Funcionalidades-Chave  
+1. Registrar gastos via chat em linguagem natural.  
+2. Classificar automaticamente as transações.  
+3. Definir e acompanhar metas financeiras.  
+4. Receber dicas de economia do “Agente Financeiro”.  
+5. Visualizar relatórios simples e personalizados.
 
-**Use your preferred IDE**
+### Entregável da IA  
+Gerar um plano de MVP com:  
+- As principais telas do aplicativo.  
+- Recursos necessários para implementar cada funcionalidade.  
+- Um esboço de validação inicial (como medir se o app cumpre seu propósito).  
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Usar tom educativo e linguagem acessível, em português.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 📊 Plano de MVP (Resumo)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- **Telas principais:** Onboarding, Chat, Metas, Relatórios, Configurações.  
+- **Recursos necessários:** NLP para interpretar mensagens, algoritmo de classificação de gastos, banco de dados, módulo de relatórios, agente financeiro educativo.  
+- **Validação inicial:** Testes com 5–10 usuários iniciantes, métricas de uso (gastos registrados, metas criadas), feedback sobre clareza das dicas.  
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 📸 Prints / Vídeos
+Inclua aqui imagens ou pequenos vídeos das interações com a IA (Copilot ou Lovable).  
+> Exemplo: captura de tela do fluxo de telas ou da conversa com o Agente Financeiro.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+---
 
-**Edit a file directly in GitHub**
+## 📌 Resumo do App
+Um app de finanças pessoais que funciona por conversa, ajuda iniciantes a registrar gastos, definir metas e receber dicas de economia de forma simples e personalizada.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 💡 Reflexão sobre o Processo
+- **O que funcionou bem:** A clareza do PRD e prompts diretos facilitaram respostas úteis da IA.  
+- **O que não funcionou como esperado:** Limitação de interações no plano gratuito do Lovable exigiu foco e estratégia.  
+- **O que aprendi:** Quanto mais claro e específico o prompt, mais próxima da intenção é a resposta da IA.  
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## 🚀 Como Executar
+Este repositório é conceitual e não contém código-fonte do app.  
+O objetivo é demonstrar a aplicação prática de **Vibe Coding** e o uso de IA como parceira criativa no design de produtos digitais.
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 📚 Licença
+Este projeto é de uso educacional, criado para o desafio da DIO.
