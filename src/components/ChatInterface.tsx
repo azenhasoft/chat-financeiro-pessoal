@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { useFinance, categorizeExpense, categoryIcons } from '@/context/FinanceContext';
+import { useFinance, categorizeExpense, categoryIcons, isCurrentMonth } from '@/context/FinanceContext';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Send, Sparkles, TrendingUp, TrendingDown } from 'lucide-react';
+import { Send } from 'lucide-react';
 
 const parseExpense = (text: string): { amount: number; description: string } | null => {
   const patterns = [
@@ -34,14 +34,14 @@ const generateResponse = (userMessage: string, context: ReturnType<typeof useFin
   
   if (lower.includes('quanto gastei') || lower.includes('meus gastos')) {
     const monthlyExpenses = context.transactions
-      .filter(t => t.type === 'expense')
+      .filter(t => t.type === 'expense' && isCurrentMonth(t.date))
       .reduce((sum, t) => sum + t.amount, 0);
     return `📊 Esse mês você já gastou **R$ ${monthlyExpenses.toFixed(2)}**. Seu saldo atual é de **R$ ${context.balance.toFixed(2)}**. Quer que eu detalhe por categoria?`;
   }
   
   if (lower.includes('categoria') || lower.includes('onde gastei')) {
     const byCategory = context.transactions
-      .filter(t => t.type === 'expense')
+      .filter(t => t.type === 'expense' && isCurrentMonth(t.date))
       .reduce((acc, t) => {
         acc[t.category] = (acc[t.category] || 0) + t.amount;
         return acc;
@@ -68,7 +68,7 @@ const generateResponse = (userMessage: string, context: ReturnType<typeof useFin
   if (lower.includes('dica') || lower.includes('economizar')) {
     const tips = [
       '💡 Que tal definir um dia da semana para não gastar nada? Pequenas economias fazem grande diferença!',
-      '💡 Considere levar marmita ao invés de pedir delivery. Você pode economizar até R$ 500/mês!',
+      '💡 Se delivery pesa no seu orçamento, compare quanto você gasta no mês com alternativas como cozinhar ou levar comida de casa.',
       '💡 Revise suas assinaturas mensais. Muitas vezes pagamos por serviços que não usamos.',
       '💡 A regra 50-30-20: 50% para necessidades, 30% para desejos e 20% para poupança.',
     ];
